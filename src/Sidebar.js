@@ -1,23 +1,52 @@
-import React from 'react';
-// ...
-import { slide as Menu } from 'react-burger-menu';
-// ...import "./Sidebar.css"
+import React, { useState } from 'react';
+import './Sidebar.css';
 
-export default props => {
+const menuItems = [
+  { label: 'Home', href: '/' },
+  { label: 'Salads', href: '/salads' },
+  { label: 'Pizzas', href: '/pizzas' },
+  { label: 'Desserts', href: '/desserts' },
+  // Add more menu items as needed
+];
+
+function Sidebar() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleToggleSidebar = () => {
+    setIsOpen(!isOpen);
+  };
+
+  const handleCloseSidebar = () => {
+    setIsOpen(false);
+  };
+
   return (
-    <Menu>
-      <a className="menu-item" href="/">
-        Home
-      </a>
-      <a className="menu-item" href="/salads">
-        Salads
-      </a>
-      <a className="menu-item" href="/pizzas">
-        Pizzas
-      </a>
-      <a className="menu-item" href="/desserts">
-        Desserts
-      </a>
-    </Menu>
+    <>
+      <div
+        className={`sidebar ${isOpen ? 'open' : ''}`}
+        role="navigation"
+        aria-label="Main Navigation"
+      >
+        <span className="close-button" onClick={handleCloseSidebar}>
+          &times;
+        </span>
+        {menuItems.map((item) => (
+          <a
+            key={item.href}
+            className="sidebar-item"
+            href={item.href}
+            onClick={handleCloseSidebar}
+            role="menuitem"
+          >
+            {item.label}
+          </a>
+        ))}
+      </div>
+      <button onClick={handleToggleSidebar}>
+        {isOpen ? 'Close Menu' : 'Open Menu'}
+      </button>
+    </>
   );
-};
+}
+
+export default Sidebar;
