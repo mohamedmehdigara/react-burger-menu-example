@@ -1,0 +1,52 @@
+/* Header styling */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+  }
+  
+  /* Logo styling */
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  /* Navigation links styling */
+  .nav {
+    display: flex;
+    gap: 15px; /* Space between links */
+  }
+  
+  .nav-link {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .nav-link:hover {
+    color: #f2c14e; /* Change color on hover */
+  }
+  
+  /* User profile image styling */
+  .user-profile {
+    display: flex;
+    align-items: center;
+  }
+  
+  .profile-img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%; /* Circular profile image */
+    margin-left: 10px;
+  }
+  /* Add this to Header.css */
+.profile-icon {
+    width: 35px; /* Set the size */
+    height: 35px;
+    fill: #fff; /* Fill color */
+  }
+  
+  
