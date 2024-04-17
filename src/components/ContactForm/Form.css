@@ -1,0 +1,51 @@
+/* Contact Form container */
+.contact-form {
+    max-width: 600px; /* Limit the width */
+    margin: 0 auto; /* Center the form */
+    padding: 20px; /* Add padding */
+    border: 1px solid #ccc; /* Border for the form */
+    border-radius: 8px; /* Rounded corners */
+    background-color: #f9f9f9; /* Light background color */
+  }
+  
+  /* Form element styling */
+  .contact-form form {
+    display: flex;
+    flex-direction: column; /* Stack form elements vertically */
+  }
+  
+  /* Form field styling */
+  .contact-form label {
+    font-weight: bold; /* Make labels bold */
+    margin-bottom: 5px; /* Add space below label */
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%; /* Make inputs and textareas take up the full width */
+    padding: 10px; /* Add padding */
+    margin-bottom: 10px; /* Add space below each field */
+    border: 1px solid #ccc; /* Border around inputs and textareas */
+    border-radius: 4px; /* Slight rounding of corners */
+    font-size: 1rem; /* Font size */
+  }
+  
+  .contact-form input[type="submit"] {
+    background-color: #27ae60; /* Green background for submit button */
+    color: #fff; /* White text color */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-weight: bold; /* Bold text */
+    border: none; /* Remove border */
+  }
+  
+  .contact-form input[type="submit"]:hover {
+    background-color: #2ecc71; /* Darker green on hover */
+  }
+  
+  /* Responsive styling */
+  @media (max-width: 600px) {
+    .contact-form {
+      padding: 15px; /* Reduce padding on smaller screens */
+    }
+  }
+  
