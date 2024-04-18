@@ -3,6 +3,11 @@ import Sidebar from './components/Sidebar/Sidebar';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import ContentCards from './components/ContentCards/ContentCards';
+import Reservation from './components/Reservation/Reservation';
+import SearchBar from './components/SearchBar/SearchBar';
+import ContactForm from './components/ContactForm/ContactForm';
+import RatingReview from './components/RatingReview/RatingReview';
+import Carousel from './components/Carousel/Carousel';
 import './App.css';
 
 function App() {
@@ -59,11 +64,26 @@ function App() {
 
         {/* Main content */}
         <div className="main-content">
+          {/* SearchBar component */}
+          <SearchBar />
+
           <h1>Welcome to Cool Restaurant!</h1>
           <h2>Check out our offerings in the sidebar or below!</h2>
 
+          {/* Carousel component */}
+          <Carousel />
+
           {/* ContentCards component with contentItems */}
           <ContentCards items={contentItems} />
+
+          {/* Reservation component */}
+          <Reservation />
+
+          {/* ContactForm component */}
+          <ContactForm />
+
+          {/* RatingReview component */}
+          <RatingReview />
         </div>
 
         {/* Footer component */}

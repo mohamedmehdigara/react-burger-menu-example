@@ -1,0 +1,52 @@
+/* Search bar container */
+.search-bar {
+    max-width: 500px; /* Limit the width of the search bar */
+    margin: 0 auto; /* Center the search bar */
+    padding: 10px; /* Add padding */
+    border: 1px solid #ccc; /* Border around the search bar */
+    border-radius: 4px; /* Slight rounding of corners */
+    display: flex; /* Use flexbox to align elements */
+    background-color: #f9f9f9; /* Light background color */
+  }
+  
+  /* Search input styling */
+  .search-bar input {
+    flex-grow: 1; /* Allow input to take up the available space */
+    padding: 10px; /* Add padding */
+    border: none; /* Remove border */
+    font-size: 1rem; /* Font size */
+    outline: none; /* Remove default outline on focus */
+  }
+  
+  /* Placeholder text styling */
+  .search-bar input::placeholder {
+    color: #888; /* Gray placeholder text */
+  }
+  
+  /* Submit button styling */
+  .search-bar button {
+    background-color: #27ae60; /* Green background */
+    color: #fff; /* White text */
+    padding: 10px; /* Padding */
+    border: none; /* Remove default border */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .search-bar button:hover {
+    background-color: #2ecc71; /* Darker green on hover */
+  }
+  
+  /* Responsive styling */
+  @media (max-width: 600px) {
+    .search-bar {
+      width: 100%; /* Full width on smaller screens */
+      padding: 5px; /* Reduce padding */
+    }
+  
+    .search-bar button {
+      padding: 8px; /* Adjust button padding */
+    }
+  }
+  

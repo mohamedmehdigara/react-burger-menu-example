@@ -7,7 +7,7 @@ function Carousel({ slides }) {
   return (
     <div className="carousel">
       {/* Map over slides and create slide elements */}
-      {slides.map((slide, index) => (
+      {slides && slides.map((slide, index) => (
         <div key={index} className="slide">
           <img src={slide.image} alt={slide.title} />
           <div className="slide-content">
