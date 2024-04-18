@@ -8,11 +8,16 @@ import SearchBar from './components/SearchBar/SearchBar';
 import ContactForm from './components/ContactForm/ContactForm';
 import RatingReview from './components/RatingReview/RatingReview';
 import Carousel from './components/Carousel/Carousel';
+import Modal from './components/Modal/Modal';
+import MenuItem from './components/MenuItem/MenuItem';
 import './App.css';
 
 function App() {
   // State for managing the sidebar's open/close state
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  
+  // State for managing the modal's open/close state
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   // Toggle the sidebar open or close
   const handleToggleSidebar = () => {
@@ -22,6 +27,11 @@ function App() {
   // Close the sidebar
   const handleCloseSidebar = () => {
     setIsSidebarOpen(false);
+  };
+
+  // Toggle the modal open or close
+  const handleToggleModal = () => {
+    setIsModalOpen(!isModalOpen);
   };
 
   // Sample content items for the ContentCards component
@@ -76,6 +86,13 @@ function App() {
           {/* ContentCards component with contentItems */}
           <ContentCards items={contentItems} />
 
+          {/* MenuItem component */}
+          <MenuItem
+            name="Featured Item"
+            description="This is a featured menu item."
+            price="$9.99"
+          />
+
           {/* Reservation component */}
           <Reservation />
 
@@ -84,6 +101,18 @@ function App() {
 
           {/* RatingReview component */}
           <RatingReview />
+
+          {/* Button to toggle the modal */}
+          <button onClick={handleToggleModal}>Open Modal</button>
+
+          {/* Modal component */}
+          {isModalOpen && (
+            <Modal onClose={handleToggleModal}>
+              <h2>Modal Title</h2>
+              <p>This is the content inside the modal.</p>
+              <button onClick={handleToggleModal}>Close Modal</button>
+            </Modal>
+          )}
         </div>
 
         {/* Footer component */}
