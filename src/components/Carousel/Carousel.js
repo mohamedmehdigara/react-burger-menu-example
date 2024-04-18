@@ -28,7 +28,7 @@ function Carousel({ slides, autoplayInterval = 3000 }) {
   return (
     <div className="carousel">
       {/* Displaying slides */}
-      {slides && slides.map((slide, index) => (
+      {slides&&slides.map((slide, index) => (
         <div
           key={index}
           className={`slide ${index === currentSlide ? 'active' : ''}`}
@@ -36,7 +36,15 @@ function Carousel({ slides, autoplayInterval = 3000 }) {
             display: index === currentSlide ? 'block' : 'none',
           }}
         >
-          <img src={slide.image} alt={slide.title} />
+          {/* Using an svg element */}
+          <svg
+            className="slide-image"
+            width="100%"
+            height="auto"
+            viewBox="0 0 100 100"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+          </svg>
           <div className="slide-content">
             <h3>{slide.title}</h3>
             <p>{slide.description}</p>
