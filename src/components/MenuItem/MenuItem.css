@@ -1,29 +1,28 @@
 /* Style for the menu item */
 .menu-item {
-    display: block;
-    padding: 10px 20px;
-    color: #fff; /* Text color */
-    text-decoration: none; /* Remove default underline */
-    cursor: pointer; /* Pointer cursor on hover */
-    transition: background-color 0.3s, color 0.3s; /* Smooth transitions */
-  }
-  
-  /* Hover effect for the menu item */
-  .menu-item:hover {
-    background-color: #444; /* Darken background color on hover */
-    color: #f2c14e; /* Change text color on hover (e.g., yellow) */
-  }
-  
-  /* Focus effect for the menu item */
-  .menu-item:focus {
-    outline: none; /* Remove default outline */
-    background-color: #555; /* Change background color when focused */
-    color: #f2c14e; /* Change text color when focused */
-  }
-  
-  /* Active state for the menu item */
-  .menu-item:active {
-    background-color: #666; /* Darker background color when active */
-    color: #f2c14e; /* Change text color when active */
-  }
-  
+  display: block;
+  padding: 10px 20px;
+  color: #fff; /* Text color */
+  text-decoration: none; /* Remove default underline */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s, color 0.3s; /* Smooth transitions */
+}
+
+/* Hover effect for the menu item */
+.menu-item:hover {
+  background-color: #444; /* Darken background color on hover */
+  color: #f2c14e; /* Change text color on hover (e.g., yellow) */
+}
+
+/* Focus effect for the menu item */
+.menu-item:focus {
+  outline: none; /* Remove default outline */
+  background-color: #555; /* Change background color when focused */
+  color: #f2c14e; /* Change text color when focused */
+}
+
+/* Active state for the menu item */
+.menu-item:active {
+  background-color: #666; /* Darker background color when active */
+  color: #f2c14e; /* Change text color when active */
+}
