@@ -10,6 +10,7 @@ import RatingReview from './components/RatingReview/RatingReview';
 import Carousel from './components/Carousel/Carousel';
 import Modal from './components/Modal/Modal';
 import MenuItem from './components/MenuItem/MenuItem';
+import DropdownMenu from './components/DropdownMenu/DropdownMenu';
 import './App.css';
 
 function App() {
@@ -82,6 +83,11 @@ function App() {
 
           {/* Carousel component */}
           <Carousel />
+          <DropdownMenu trigger={<button>Open Menu</button>}>
+        <a href="#">Menu Item 1</a>
+        <a href="#">Menu Item 2</a>
+        <a href="#">Menu Item 3</a>
+      </DropdownMenu>
 
           {/* ContentCards component with contentItems */}
           <ContentCards items={contentItems} />
