@@ -1,51 +1,94 @@
 /* Contact Form container */
 .contact-form {
-    max-width: 600px; /* Limit the width */
-    margin: 0 auto; /* Center the form */
-    padding: 20px; /* Add padding */
-    border: 1px solid #ccc; /* Border for the form */
-    border-radius: 8px; /* Rounded corners */
-    background-color: #f9f9f9; /* Light background color */
-  }
-  
-  /* Form element styling */
-  .contact-form form {
-    display: flex;
-    flex-direction: column; /* Stack form elements vertically */
-  }
-  
-  /* Form field styling */
-  .contact-form label {
-    font-weight: bold; /* Make labels bold */
-    margin-bottom: 5px; /* Add space below label */
-  }
-  
-  .contact-form input,
-  .contact-form textarea {
-    width: 100%; /* Make inputs and textareas take up the full width */
-    padding: 10px; /* Add padding */
-    margin-bottom: 10px; /* Add space below each field */
-    border: 1px solid #ccc; /* Border around inputs and textareas */
-    border-radius: 4px; /* Slight rounding of corners */
-    font-size: 1rem; /* Font size */
-  }
-  
-  .contact-form input[type="submit"] {
-    background-color: #27ae60; /* Green background for submit button */
-    color: #fff; /* White text color */
-    cursor: pointer; /* Pointer cursor on hover */
-    font-weight: bold; /* Bold text */
-    border: none; /* Remove border */
-  }
-  
-  .contact-form input[type="submit"]:hover {
-    background-color: #2ecc71; /* Darker green on hover */
-  }
-  
-  /* Responsive styling */
-  @media (max-width: 600px) {
-    .contact-form {
+  max-width: 600px; /* Limit the width */
+  margin: 0 auto; /* Center the form */
+  padding: 20px; /* Add padding */
+  border: 1px solid #ccc; /* Border for the form */
+  border-radius: 8px; /* Rounded corners */
+  background-color: #f9f9f9; /* Light background color */
+}
+
+/* Form element styling */
+.contact-form form {
+  display: flex;
+  flex-direction: column; /* Stack form elements vertically */
+}
+
+/* Form field styling */
+.contact-form label {
+  font-weight: bold; /* Make labels bold */
+  margin-bottom: 5px; /* Add space below label */
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form select {
+  width: 100%; /* Make inputs, textareas, and select dropdowns take up the full width */
+  padding: 10px; /* Add padding */
+  margin-bottom: 10px; /* Add space below each field */
+  border: 1px solid #ccc; /* Border around inputs, textareas, and select dropdowns */
+  border-radius: 4px; /* Slight rounding of corners */
+  font-size: 1rem; /* Font size */
+  transition: border-color 0.3s ease-in-out; /* Add transition for border color */
+}
+
+.contact-form input[type="submit"] {
+  background-color: #27ae60; /* Green background for submit button */
+  color: #fff; /* White text color */
+  cursor: pointer; /* Pointer cursor on hover */
+  font-weight: bold; /* Bold text */
+  border: none; /* Remove border */
+}
+
+.contact-form input[type="submit"]:hover {
+  background-color: #2ecc71; /* Darker green on hover */
+}
+
+/* Field validation styles */
+.contact-form input:valid,
+.contact-form textarea:valid,
+.contact-form select:valid {
+  border-color: #2ecc71; /* Green border for valid fields */
+}
+
+.contact-form input:invalid,
+.contact-form textarea:invalid,
+.contact-form select:invalid {
+  border-color: #e74c3c; /* Red border for invalid fields */
+}
+
+/* Placeholder styling */
+.contact-form input::placeholder,
+.contact-form textarea::placeholder,
+.contact-form select option {
+  color: #999; /* Light gray color for placeholders */
+}
+
+/* Error message styling */
+.error-message {
+  color: #e74c3c; /* Red color for error messages */
+  font-size: 0.8rem; /* Smaller font size for error messages */
+  margin-top: 5px; /* Add space above error messages */
+}
+
+/* Focus states */
+.contact-form input:focus,
+.contact-form textarea:focus,
+.contact-form select:focus {
+  border-color: #3498db; /* Blue border on focus */
+  outline: none; /* Remove outline */
+  box-shadow: 0 0 5px rgba(52, 152, 219, 0.5); /* Add shadow on focus */
+}
+
+/* Checkbox and radio button styling */
+.contact-form input[type="checkbox"],
+.contact-form input[type="radio"] {
+  margin-right: 5px; /* Add space between checkbox and label */
+}
+
+/* Responsive styling */
+@media (max-width: 600px) {
+  .contact-form {
       padding: 15px; /* Reduce padding on smaller screens */
-    }
   }
-  
+}
