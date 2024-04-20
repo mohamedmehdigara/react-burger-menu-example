@@ -1,61 +1,74 @@
 /* Rating and review form container */
 .rating-review {
-    max-width: 600px; /* Limit the width of the form */
-    margin: 0 auto; /* Center the form */
-    padding: 20px; /* Add padding */
-    border: 1px solid #ccc; /* Border around the form */
-    border-radius: 8px; /* Rounded corners */
-    background-color: #f9f9f9; /* Light background color */
-  }
-  
-  /* Form elements layout */
-  .rating-review form {
-    display: flex;
-    flex-direction: column; /* Stack form fields vertically */
-  }
-  
-  /* Form field styling */
-  .rating-review label {
-    font-weight: bold; /* Make labels bold */
-    margin-bottom: 5px; /* Add space below labels */
-  }
-  
-  .rating-review input,
-  .rating-review textarea {
-    width: 100%; /* Full width input fields */
-    padding: 10px; /* Add padding */
-    margin-bottom: 10px; /* Add space between form elements */
-    border: 1px solid #ccc; /* Border for inputs and text areas */
-    border-radius: 4px; /* Slightly rounded corners */
-    font-size: 1rem; /* Font size */
-  }
-  
-  /* Textarea styling */
-  .rating-review textarea {
-    height: 80px; /* Adjust height as needed */
-    resize: vertical; /* Allow vertical resizing */
-  }
-  
-  /* Submit button styling */
-  .rating-review button[type="submit"] {
-    background-color: #27ae60; /* Green background */
-    color: #fff; /* White text */
-    padding: 10px 15px; /* Add padding */
-    border: none; /* Remove default border */
-    border-radius: 4px; /* Rounded corners */
-    font-weight: bold; /* Bold text */
-    cursor: pointer; /* Pointer cursor on hover */
-    transition: background-color 0.3s ease-in-out;
-  }
-  
-  .rating-review button[type="submit"]:hover {
-    background-color: #2ecc71; /* Darker green on hover */
-  }
-  
-  /* Responsive styling */
-  @media (max-width: 600px) {
-    .rating-review {
+  max-width: 600px; /* Limit the width of the form */
+  margin: 0 auto; /* Center the form */
+  padding: 20px; /* Add padding */
+  border: 1px solid #ccc; /* Border around the form */
+  border-radius: 8px; /* Rounded corners */
+  background-color: #f9f9f9; /* Light background color */
+}
+
+/* Form elements layout */
+.rating-review form {
+  display: grid; /* Use CSS grid for form layout */
+  gap: 10px; /* Add space between form fields */
+}
+
+/* Form field styling */
+.rating-review label {
+  font-weight: bold; /* Make labels bold */
+}
+
+.rating-review input[type="number"],
+.rating-review textarea {
+  width: 100%; /* Full width input fields */
+  padding: 10px; /* Add padding */
+  border: 1px solid #ccc; /* Border for inputs and text areas */
+  border-radius: 4px; /* Slightly rounded corners */
+  font-size: 1rem; /* Font size */
+}
+
+/* Textarea styling */
+.rating-review textarea {
+  height: 100px; /* Adjust height as needed */
+  resize: vertical; /* Allow vertical resizing */
+}
+
+/* Rating input styling */
+.rating-input {
+  display: flex; /* Align rating inputs horizontally */
+  align-items: center; /* Center items vertically */
+}
+
+.rating-label {
+  margin-right: 10px; /* Add space between label and input */
+}
+
+.rating-review input[type="number"]::-webkit-inner-spin-button,
+.rating-review input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none; /* Remove default spinner */
+  margin: 0; /* Remove default margin */
+}
+
+/* Submit button styling */
+.rating-review button[type="submit"] {
+  background-color: #27ae60; /* Green background */
+  color: #fff; /* White text */
+  padding: 10px 15px; /* Add padding */
+  border: none; /* Remove default border */
+  border-radius: 4px; /* Rounded corners */
+  font-weight: bold; /* Bold text */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease-in-out;
+}
+
+.rating-review button[type="submit"]:hover {
+  background-color: #2ecc71; /* Darker green on hover */
+}
+
+/* Responsive styling */
+@media (max-width: 600px) {
+  .rating-review {
       padding: 15px; /* Reduce padding on smaller screens */
-    }
   }
-  
+}

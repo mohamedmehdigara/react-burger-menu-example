@@ -1,89 +1,90 @@
 /* Modal overlay styling */
 .modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 1000; /* Ensure overlay is above other content */
-  }
-  
-  /* Modal container styling */
-  .modal-container {
-    background-color: #fff; /* White background */
-    padding: 20px; /* Add padding */
-    border-radius: 8px; /* Rounded corners */
-    max-width: 500px; /* Limit the width */
-    width: 90%; /* Responsive width */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Soft shadow */
-    position: relative;
-  }
-  
-  /* Close button styling */
-  .modal-close-button {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background: none;
-    border: none;
-    color: #333; /* Dark color */
-    font-size: 1.5rem; /* Larger font size */
-    cursor: pointer;
-    transition: color 0.3s ease-in-out;
-  }
-  
-  .modal-close-button:hover {
-    color: #f00; /* Red color on hover */
-  }
-  
-  /* Modal content styling */
-  .modal-content {
-    margin-bottom: 20px;
-  }
-  
-  /* Modal header styling */
-  .modal-header {
-    font-size: 1.25rem; /* Increase font size */
-    font-weight: bold; /* Bold text */
-    margin-bottom: 10px;
-  }
-  
-  /* Modal footer styling */
-  .modal-footer {
-    display: flex;
-    justify-content: flex-end;
-    gap: 10px; /* Space between buttons */
-  }
-  
-  /* Modal buttons styling */
-  .modal-button {
-    padding: 10px 15px; /* Padding */
-    border-radius: 4px; /* Rounded corners */
-    border: none;
-    font-weight: bold; /* Bold text */
-    cursor: pointer; /* Pointer cursor */
-    transition: background 0.3s ease-in-out;
-  }
-  
-  .modal-button-primary {
-    background-color: #27ae60; /* Green background */
-    color: #fff; /* White text */
-  }
-  
-  .modal-button-primary:hover {
-    background-color: #2ecc71; /* Darker green on hover */
-  }
-  
-  .modal-button-secondary {
-    background-color: #ccc; /* Light gray background */
-    color: #333; /* Dark text */
-  }
-  
-  .modal-button-secondary:hover {
-    background-color: #b3b3b3; /* Darker gray on hover */
-  }
-  
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000; /* Ensure overlay is above other content */
+}
+
+/* Modal container styling */
+.modal-container {
+  background-color: #fff; /* White background */
+  padding: 20px; /* Add padding */
+  border-radius: 8px; /* Rounded corners */
+  max-width: 500px; /* Limit the width */
+  width: 90%; /* Responsive width */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Soft shadow */
+  position: relative;
+}
+
+/* Close button styling */
+.modal-close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  color: #333; /* Dark color */
+  font-size: 1.5rem; /* Larger font size */
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+}
+
+.modal-close-button:hover {
+  color: #f00; /* Red color on hover */
+}
+
+/* Modal content styling */
+.modal-content {
+  margin-bottom: 20px;
+}
+
+/* Modal header styling */
+.modal-header {
+  font-size: 1.5rem; /* Larger font size */
+  font-weight: bold; /* Bold text */
+  margin-bottom: 10px;
+  color: #333; /* Dark color */
+}
+
+/* Modal footer styling */
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px; /* Space between buttons */
+  margin-top: 20px; /* Add margin to separate from content */
+}
+
+/* Modal buttons styling */
+.modal-button {
+  padding: 10px 20px; /* Padding */
+  border-radius: 4px; /* Rounded corners */
+  border: none;
+  font-weight: bold; /* Bold text */
+  cursor: pointer; /* Pointer cursor */
+  transition: background 0.3s ease-in-out;
+}
+
+.modal-button-primary {
+  background-color: #27ae60; /* Green background */
+  color: #fff; /* White text */
+}
+
+.modal-button-primary:hover {
+  background-color: #2ecc71; /* Darker green on hover */
+}
+
+.modal-button-secondary {
+  background-color: #ccc; /* Light gray background */
+  color: #333; /* Dark text */
+}
+
+.modal-button-secondary:hover {
+  background-color: #b3b3b3; /* Darker gray on hover */
+}

@@ -1,60 +1,64 @@
 /* Reservation form container */
 .reservation-form {
-    max-width: 600px; /* Limit the width of the form */
-    margin: 0 auto; /* Center the form */
-    padding: 20px; /* Add padding */
-    border: 1px solid #ccc; /* Border around the form */
-    border-radius: 8px; /* Rounded corners */
-    background-color: #f9f9f9; /* Light background color */
-  }
-  
-  /* Form elements layout */
-  .reservation-form form {
-    display: flex;
-    flex-direction: column; /* Stack form fields vertically */
-  }
-  
-  /* Form field styling */
-  .reservation-form label {
-    font-weight: bold; /* Make labels bold */
-    margin-bottom: 5px; /* Add space below labels */
-  }
-  
-  .reservation-form input {
-    width: 100%; /* Full width input fields */
-    padding: 10px; /* Add padding */
-    margin-bottom: 10px; /* Add space between form elements */
-    border: 1px solid #ccc; /* Border for inputs */
-    border-radius: 4px; /* Slightly rounded corners */
-    font-size: 1rem; /* Font size */
-  }
-  
-  /* Date and time input styling */
-  .reservation-form input[type="date"],
-  .reservation-form input[type="time"] {
-    padding: 8px; /* Adjust padding for smaller inputs */
-  }
-  
-  /* Submit button styling */
-  .reservation-form button[type="submit"] {
-    background-color: #27ae60; /* Green background */
-    color: #fff; /* White text */
-    padding: 10px 15px; /* Add padding */
-    border: none; /* Remove default border */
-    border-radius: 4px; /* Rounded corners */
-    font-weight: bold; /* Bold text */
-    cursor: pointer; /* Pointer cursor on hover */
-    transition: background-color 0.3s ease-in-out;
-  }
-  
-  .reservation-form button[type="submit"]:hover {
-    background-color: #2ecc71; /* Darker green on hover */
-  }
-  
-  /* Responsive styling */
-  @media (max-width: 600px) {
-    .reservation-form {
+  max-width: 600px; /* Limit the width of the form */
+  margin: 0 auto; /* Center the form */
+  padding: 20px; /* Add padding */
+  border: 1px solid #ccc; /* Border around the form */
+  border-radius: 8px; /* Rounded corners */
+  background-color: #f9f9f9; /* Light background color */
+}
+
+/* Form elements layout */
+.reservation-form form {
+  display: grid; /* Use CSS grid for form layout */
+  gap: 15px; /* Add space between form fields */
+}
+
+/* Form field styling */
+.reservation-form label {
+  font-weight: bold; /* Make labels bold */
+}
+
+.reservation-form input[type="date"],
+.reservation-form input[type="time"],
+.reservation-form input[type="number"] {
+  width: 100%; /* Full width input fields */
+  padding: 12px; /* Add padding */
+  border: 1px solid #ccc; /* Border for inputs */
+  border-radius: 4px; /* Slightly rounded corners */
+  font-size: 1rem; /* Font size */
+}
+
+/* Date and time input styling */
+.reservation-form input[type="date"],
+.reservation-form input[type="time"] {
+  /* Customize date and time input appearance */
+}
+
+/* Party size input styling */
+.reservation-form input[type="number"] {
+  /* Additional styling for number input */
+}
+
+/* Submit button styling */
+.reservation-form button[type="submit"] {
+  background-color: #27ae60; /* Green background */
+  color: #fff; /* White text */
+  padding: 12px 20px; /* Add padding */
+  border: none; /* Remove default border */
+  border-radius: 4px; /* Rounded corners */
+  font-weight: bold; /* Bold text */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease-in-out;
+}
+
+.reservation-form button[type="submit"]:hover {
+  background-color: #2ecc71; /* Darker green on hover */
+}
+
+/* Responsive styling */
+@media (max-width: 600px) {
+  .reservation-form {
       padding: 15px; /* Reduce padding on smaller screens */
-    }
   }
-  
+}
