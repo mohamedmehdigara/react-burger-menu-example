@@ -2,9 +2,8 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import HomeIcon from '../HomeIcon/HomeIcon';
 import SaladIcon from '../SaladIcon/SaladIcon';
-import PizzaIcon from './PizzaIcon'; // Import your Pizza SVG icon component
-import DessertIcon from './DessertIcon'; // Import your Dessert SVG icon component
-
+import PizzaIcon from '../PizzaIcon/PizzaIcon';
+import DessertIcon from '../DessertIcon/DessertIcon';
 import './Header.css';
 
 function Header({ onToggleSidebar }) {
@@ -36,22 +35,22 @@ function Header({ onToggleSidebar }) {
 
             {/* Navigation menu */}
             <nav className={`nav ${isMobileMenuOpen ? 'open' : ''}`}>
-            <Link to="/" className="nav-link" aria-label="Home">
-        <HomeIcon /> {/* Your Home SVG icon component */}
-        Home
-      </Link>
-      <Link to="/salads" className="nav-link" aria-label="Salads">
-        <SaladIcon /> {/* Your Salad SVG icon component */}
-        Salads
-      </Link>
-      <Link to="/pizzas" className="nav-link" aria-label="Pizzas">
-        <PizzaIcon /> {/* Your Pizza SVG icon component */}
-        Pizzas
-      </Link>
-      <Link to="/desserts" className="nav-link" aria-label="Desserts">
-        <DessertIcon /> {/* Your Dessert SVG icon component */}
-        Desserts
-      </Link>
+                <Link to="/" className="nav-link" aria-label="Home">
+                    <HomeIcon /> {/* Your Home SVG icon component */}
+                    Home
+                </Link>
+                <Link to="/salads" className="nav-link" aria-label="Salads">
+                    <SaladIcon /> {/* Your Salad SVG icon component */}
+                    Salads
+                </Link>
+                <Link to="/pizzas" className="nav-link" aria-label="Pizzas">
+                    <PizzaIcon /> {/* Your Pizza SVG icon component */}
+                    Pizzas
+                </Link>
+                <Link to="/desserts" className="nav-link" aria-label="Desserts">
+                    <DessertIcon /> {/* Your Dessert SVG icon component */}
+                    Desserts
+                </Link>
             </nav>
 
             {/* Search bar */}
