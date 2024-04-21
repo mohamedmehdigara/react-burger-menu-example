@@ -1,0 +1,27 @@
+.accordion {
+    border: 1px solid #ccc;
+  }
+  
+  .accordion-item {
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .accordion-title {
+    padding: 10px;
+    cursor: pointer;
+    background-color: #f1f1f1;
+  }
+  
+  .accordion-title.active {
+    background-color: #e3e3e3;
+  }
+  
+  .accordion-content {
+    padding: 10px;
+    display: none;
+  }
+  
+  .accordion-content.open {
+    display: block;
+  }
+  

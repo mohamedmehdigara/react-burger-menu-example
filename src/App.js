@@ -12,6 +12,7 @@ import Modal from './components/Modal/Modal';
 import MenuItem from './components/MenuItem/MenuItem';
 import DropdownMenu from './components/DropdownMenu/DropdownMenu';
 import ImageGallery from './components/ImageGallery/ImageGallery';
+import Accordion from './components/Accordion/Accordion'; // Import the Accordion component
 import './App.css';
 
 function App() {
@@ -65,6 +66,22 @@ function App() {
     }
   ];
 
+  // Sample accordion items
+  const accordionItems = [
+    {
+      title: 'Section 1',
+      content: 'Content for section 1'
+    },
+    {
+      title: 'Section 2',
+      content: 'Content for section 2'
+    },
+    {
+      title: 'Section 3',
+      content: 'Content for section 3'
+    }
+  ];
+
   return (
     <div className="App" id="outer-container">
       {/* Sidebar component */}
@@ -89,16 +106,15 @@ function App() {
           <h1>Welcome to Cool Restaurant!</h1>
           <h2>Check out our offerings in the sidebar or below!</h2>
           
-
           {/* Carousel component */}
           <Carousel />
           <h1>Image Gallery</h1>
-      <ImageGallery images={images} />
+          <ImageGallery images={images} />
           <DropdownMenu trigger={<button>Open Menu</button>}>
-        <a href="#">Menu Item 1</a>
-        <a href="#">Menu Item 2</a>
-        <a href="#">Menu Item 3</a>
-      </DropdownMenu>
+            <a href="#">Menu Item 1</a>
+            <a href="#">Menu Item 2</a>
+            <a href="#">Menu Item 3</a>
+          </DropdownMenu>
 
           {/* ContentCards component with contentItems */}
           <ContentCards items={contentItems} />
@@ -130,6 +146,9 @@ function App() {
               <button onClick={handleToggleModal}>Close Modal</button>
             </Modal>
           )}
+
+          {/* Accordion component */}
+          <Accordion items={accordionItems} />
         </div>
 
         {/* Footer component */}
