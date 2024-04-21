@@ -11,6 +11,7 @@ import Carousel from './components/Carousel/Carousel';
 import Modal from './components/Modal/Modal';
 import MenuItem from './components/MenuItem/MenuItem';
 import DropdownMenu from './components/DropdownMenu/DropdownMenu';
+import ImageGallery from './components/ImageGallery/ImageGallery';
 import './App.css';
 
 function App() {
@@ -19,6 +20,13 @@ function App() {
   
   // State for managing the modal's open/close state
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const images = [
+    'https://via.placeholder.com/400x300',
+    'https://via.placeholder.com/400x300',
+    'https://via.placeholder.com/400x300',
+    'https://via.placeholder.com/400x300',
+    // Add more image URLs here
+  ];
 
   // Toggle the sidebar open or close
   const handleToggleSidebar = () => {
@@ -80,9 +88,12 @@ function App() {
 
           <h1>Welcome to Cool Restaurant!</h1>
           <h2>Check out our offerings in the sidebar or below!</h2>
+          
 
           {/* Carousel component */}
           <Carousel />
+          <h1>Image Gallery</h1>
+      <ImageGallery images={images} />
           <DropdownMenu trigger={<button>Open Menu</button>}>
         <a href="#">Menu Item 1</a>
         <a href="#">Menu Item 2</a>
