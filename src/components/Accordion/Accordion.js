@@ -1,11 +1,19 @@
 import React, { useState } from 'react';
 import './Accordion.css';
 
-const Accordion = ({ items }) => {
-  const [activeIndex, setActiveIndex] = useState(null);
+const Accordion = ({ items, allowMultiple = false }) => {
+  const [activeIndices, setActiveIndices] = useState([]);
 
   const onItemClick = (index) => {
-    setActiveIndex(index === activeIndex ? null : index);
+    if (allowMultiple) {
+      setActiveIndices((prevIndices) =>
+        prevIndices.includes(index)
+          ? prevIndices.filter((i) => i !== index)
+          : [...prevIndices, index]
+      );
+    } else {
+      setActiveIndices((prevIndices) => (prevIndices[0] === index ? [] : [index]));
+    }
   };
 
   return (
@@ -13,12 +21,25 @@ const Accordion = ({ items }) => {
       {items.map((item, index) => (
         <div key={index} className="accordion-item">
           <div
-            className={`accordion-title ${index === activeIndex ? 'active' : ''}`}
+            className={`accordion-title ${activeIndices.includes(index) ? 'active' : ''}`}
             onClick={() => onItemClick(index)}
+            role="button"
+            tabIndex={0}
+            onKeyDown={(e) => {
+              if (e.key === 'Enter' || e.key === ' ') {
+                onItemClick(index);
+              }
+            }}
+            aria-expanded={activeIndices.includes(index)}
+            aria-controls={`accordion-content-${index}`}
           >
             {item.title}
+            {/* Add an icon here if desired */}
           </div>
-          <div className={`accordion-content ${index === activeIndex ? 'open' : ''}`}>
+          <div
+            id={`accordion-content-${index}`}
+            className={`accordion-content ${activeIndices.includes(index) ? 'open' : ''}`}
+          >
             {item.content}
           </div>
         </div>
