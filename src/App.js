@@ -15,6 +15,7 @@ import ImageGallery from './components/ImageGallery/ImageGallery';
 import Tabs from './components/Tabs/Tabs';
 import Tooltip from './components/Tooltip/Tooltip';
 import Stepper from './components/Stepper/Stepper';
+import Progressbar from './components/Progressbar/Progressbar';
 import Accordion from './components/Accordion/Accordion'; // Import the Accordion component
 import './App.css';
 
@@ -97,6 +98,9 @@ function App() {
     }
   ];
 
+  const value = 75;
+  const max = 100;
+
   return (
     <div className="App" id="outer-container">
       {/* Sidebar component */}
@@ -130,6 +134,9 @@ function App() {
       <Tooltip text="This is a tooltip">
         <button>Hover over me</button>
       </Tooltip>
+      <h1>Progress Bar Example</h1>
+      {/* Render the Progressbar component with the appropriate props */}
+      <Progressbar value={value} max={max} />
 
           <h1>Image Gallery</h1>
           <ImageGallery images={images} />
