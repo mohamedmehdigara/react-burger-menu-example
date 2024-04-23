@@ -12,6 +12,8 @@ import Modal from './components/Modal/Modal';
 import MenuItem from './components/MenuItem/MenuItem';
 import DropdownMenu from './components/DropdownMenu/DropdownMenu';
 import ImageGallery from './components/ImageGallery/ImageGallery';
+import Tabs from './components/Tabs/Tabs';
+import Tooltip from './components/Tooltip/Tooltip';
 import Accordion from './components/Accordion/Accordion'; // Import the Accordion component
 import './App.css';
 
@@ -27,6 +29,12 @@ function App() {
     'https://via.placeholder.com/400x300',
     'https://via.placeholder.com/400x300',
     // Add more image URLs here
+  ];
+
+  const tabs = [
+    { title: 'Tab 1', content: 'Content for Tab 1' },
+    { title: 'Tab 2', content: 'Content for Tab 2' },
+    { title: 'Tab 3', content: 'Content for Tab 3' },
   ];
 
   // Toggle the sidebar open or close
@@ -108,6 +116,12 @@ function App() {
           
           {/* Carousel component */}
           <Carousel />
+          <Tabs tabs={tabs} />
+          <h1>Tooltip Example</h1>
+      <Tooltip text="This is a tooltip">
+        <button>Hover over me</button>
+      </Tooltip>
+
           <h1>Image Gallery</h1>
           <ImageGallery images={images} />
           <DropdownMenu trigger={<button>Open Menu</button>}>

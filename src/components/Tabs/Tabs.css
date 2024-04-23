@@ -1,0 +1,23 @@
+.tabs-container {
+    width: 100%;
+  }
+  
+  .tabs {
+    display: flex;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .tab {
+    padding: 10px 20px;
+    cursor: pointer;
+    border-bottom: 3px solid transparent;
+  }
+  
+  .tab.active {
+    border-bottom-color: #007bff; /* Change color as needed */
+  }
+  
+  .tab-content {
+    padding: 20px;
+  }
+  
