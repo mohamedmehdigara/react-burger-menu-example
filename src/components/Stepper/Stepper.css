@@ -1,0 +1,49 @@
+/* Stepper container */
+.stepper {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  /* Step indicator */
+  .step-indicator {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  /* Step content */
+  .step-content {
+    margin-bottom: 20px;
+  }
+  
+  /* Step navigation buttons */
+  .step-navigation button {
+    padding: 8px 16px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+    transition: background-color 0.3s;
+  }
+  
+  .step-navigation button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Disable previous button on first step */
+  .step-navigation button:first-child:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  /* Disable next button on last step */
+  .step-navigation button:last-child:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  

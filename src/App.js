@@ -14,6 +14,7 @@ import DropdownMenu from './components/DropdownMenu/DropdownMenu';
 import ImageGallery from './components/ImageGallery/ImageGallery';
 import Tabs from './components/Tabs/Tabs';
 import Tooltip from './components/Tooltip/Tooltip';
+import Stepper from './components/Stepper/Stepper';
 import Accordion from './components/Accordion/Accordion'; // Import the Accordion component
 import './App.css';
 
@@ -35,6 +36,12 @@ function App() {
     { title: 'Tab 1', content: 'Content for Tab 1' },
     { title: 'Tab 2', content: 'Content for Tab 2' },
     { title: 'Tab 3', content: 'Content for Tab 3' },
+  ];
+
+  const steps = [
+    { content: "Step 1 content" },
+    { content: "Step 2 content" },
+    { content: "Step 3 content" }
   ];
 
   // Toggle the sidebar open or close
@@ -116,6 +123,8 @@ function App() {
           
           {/* Carousel component */}
           <Carousel />
+          <h1>Stepper Example</h1>
+      <Stepper steps={steps} />
           <Tabs tabs={tabs} />
           <h1>Tooltip Example</h1>
       <Tooltip text="This is a tooltip">
