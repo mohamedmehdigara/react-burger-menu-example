@@ -39,6 +39,7 @@ const Accordion = ({ items, allowMultiple = false }) => {
           <div
             id={`accordion-content-${index}`}
             className={`accordion-content ${activeIndices.includes(index) ? 'open' : ''}`}
+            aria-hidden={!activeIndices.includes(index)}
           >
             {item.content}
           </div>
