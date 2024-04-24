@@ -123,6 +123,17 @@ function App() {
   // Static array of sample suggestions
   const staticSuggestions = ['Apple', 'Banana', 'Orange', 'Pear', 'Pineapple'];
 
+  const handleSearch = (query) => {
+    // Perform search based on query and update suggestions
+    // For example, fetch suggestions from an API
+    // Update the suggestions state with the fetched data
+  };
+
+  const handleSelect = (value) => {
+    // Handle selection of suggestion
+    // For example, update state with selected value
+  };
+
 
   return (
     <div className="App" id="outer-container">
@@ -145,7 +156,11 @@ function App() {
           {/* SearchBar component */}
           <SearchBar />
           <h1>Search Autocomplete Example</h1>
-      <Autocomplete suggestions={suggestions} onSearch={fetchSuggestions} />
+          <Autocomplete
+  suggestions={suggestions}
+  onSearch={handleSearch}
+  onSelect={handleSelect}
+/>
 
           <h1>Welcome to Cool Restaurant!</h1>
           <h2>Check out our offerings in the sidebar or below!</h2>
