@@ -23,6 +23,7 @@ import Notification from './components/Notification/Notification'; // Import the
 import ToggleSwitch from './components/ToggleSwitch/ToggleSwitch'; // Import the ToggleSwitch component
 import Slider from './components/Slider/Slider'; // Import the Slider component
 import Autocomplete from './components/Autocomplete/Autocomplete';
+import DragAndDrop from './components/DragAndDrop/DragAndDrop';
 import './App.css';
 
 function App() {
@@ -161,6 +162,8 @@ function App() {
   onSearch={handleSearch}
   onSelect={handleSelect}
 />
+
+<DragAndDrop />
 
           <h1>Welcome to Cool Restaurant!</h1>
           <h2>Check out our offerings in the sidebar or below!</h2>

@@ -1,0 +1,23 @@
+.drag-and-drop {
+    font-family: Arial, sans-serif;
+  }
+  
+  .task-list {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+  }
+  
+  .task {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 8px;
+    margin-bottom: 8px;
+    cursor: grab;
+  }
+  
+  .task:active {
+    cursor: grabbing;
+  }
+  
