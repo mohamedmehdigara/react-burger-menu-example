@@ -22,7 +22,7 @@ import Pagination from './components/Pagination/Pagination';
 import Notification from './components/Notification/Notification'; // Import the Notification component
 import ToggleSwitch from './components/ToggleSwitch/ToggleSwitch'; // Import the ToggleSwitch component
 import Slider from './components/Slider/Slider'; // Import the Slider component
-
+import Autocomplete from './components/Autocomplete/Autocomplete';
 import './App.css';
 
 function App() {
@@ -107,6 +107,23 @@ function App() {
   const value = 75;
   const max = 100;
 
+  const [suggestions, setSuggestions] = useState([]);
+
+  // Function to fetch suggestions from the backend based on the search query
+  const fetchSuggestions = (query) => {
+    // Make an API call to fetch suggestions based on the query
+    // Update the suggestions state with the fetched suggestions
+    // For demonstration purposes, let's assume suggestions are fetched from a static array
+    const filteredSuggestions = staticSuggestions.filter(suggestion =>
+      suggestion.toLowerCase().includes(query.toLowerCase())
+    );
+    setSuggestions(filteredSuggestions);
+  };
+
+  // Static array of sample suggestions
+  const staticSuggestions = ['Apple', 'Banana', 'Orange', 'Pear', 'Pineapple'];
+
+
   return (
     <div className="App" id="outer-container">
       {/* Sidebar component */}
@@ -127,6 +144,8 @@ function App() {
         <div className="main-content">
           {/* SearchBar component */}
           <SearchBar />
+          <h1>Search Autocomplete Example</h1>
+      <Autocomplete suggestions={suggestions} onSearch={fetchSuggestions} />
 
           <h1>Welcome to Cool Restaurant!</h1>
           <h2>Check out our offerings in the sidebar or below!</h2>
