@@ -19,6 +19,8 @@ import Progressbar from './components/Progressbar/Progressbar';
 import Accordion from './components/Accordion/Accordion'; // Import the Accordion component
 import ToggleSwitch from './components/ToggleSwitch/ToggleSwitch'; // Import the ToggleSwitch component
 import Pagination from './components/Pagination/Pagination';
+import Loader from './components/Loader/Loader';
+import Slider from './components/Slider/Slider';
 import './App.css';
 
 function App() {
@@ -198,6 +200,10 @@ function App() {
 
           {/* Accordion component */}
           <Accordion items={accordionItems} />
+          <Loader />
+
+{/* Render the Slider component */}
+<Slider min={0} max={100} step={1} onChange={(value) => console.log(value)} />
         </div>
         <Pagination
         currentPage={currentPage}
