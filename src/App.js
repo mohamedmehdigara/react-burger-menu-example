@@ -18,6 +18,7 @@ import Stepper from './components/Stepper/Stepper';
 import Progressbar from './components/Progressbar/Progressbar';
 import Accordion from './components/Accordion/Accordion'; // Import the Accordion component
 import ToggleSwitch from './components/ToggleSwitch/ToggleSwitch'; // Import the ToggleSwitch component
+import Pagination from './components/Pagination/Pagination';
 import './App.css';
 
 function App() {
@@ -102,6 +103,18 @@ function App() {
   const value = 75;
   const max = 100;
 
+  const [currentPage, setCurrentPage] = useState(1);
+
+  // Dummy data for pagination
+  const itemsPerPage = 5;
+  const totalItems = 25;
+  const totalPages = Math.ceil(totalItems / itemsPerPage);
+
+  // Handle page change
+  const handlePageChange = (pageNumber) => {
+    setCurrentPage(pageNumber);
+  };
+
   return (
     <div className="App" id="outer-container">
       {/* Sidebar component */}
@@ -128,6 +141,7 @@ function App() {
           
           {/* Carousel component */}
           <Carousel />
+          
           <h1>Stepper Example</h1>
       <Stepper steps={steps} />
           <Tabs tabs={tabs} />
@@ -185,7 +199,11 @@ function App() {
           {/* Accordion component */}
           <Accordion items={accordionItems} />
         </div>
-
+        <Pagination
+        currentPage={currentPage}
+        totalPages={totalPages}
+        onPageChange={handlePageChange}
+      />
         {/* Footer component */}
         <Footer />
       </div>
