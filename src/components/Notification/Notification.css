@@ -1,0 +1,40 @@
+.notification {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+  }
+  
+  .message {
+    flex: 1;
+  }
+  
+  .success {
+    background-color: #dff0d8;
+    color: #3c763d;
+  }
+  
+  .info {
+    background-color: #d9edf7;
+    color: #31708f;
+  }
+  
+  .warning {
+    background-color: #fcf8e3;
+    color: #8a6d3b;
+  }
+  
+  .error {
+    background-color: #f2dede;
+    color: #a94442;
+  }
+  
+  .close-btn {
+    margin-left: 10px;
+    cursor: pointer;
+    border: none;
+    background: none;
+    color: inherit;
+  }
+  

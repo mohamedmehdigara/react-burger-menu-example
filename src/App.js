@@ -16,19 +16,25 @@ import Tabs from './components/Tabs/Tabs';
 import Tooltip from './components/Tooltip/Tooltip';
 import Stepper from './components/Stepper/Stepper';
 import Progressbar from './components/Progressbar/Progressbar';
-import Accordion from './components/Accordion/Accordion'; // Import the Accordion component
-import ToggleSwitch from './components/ToggleSwitch/ToggleSwitch'; // Import the ToggleSwitch component
-import Pagination from './components/Pagination/Pagination';
+import Accordion from './components/Accordion/Accordion';
 import Loader from './components/Loader/Loader';
-import Slider from './components/Slider/Slider';
+import Pagination from './components/Pagination/Pagination';
+import Notification from './components/Notification/Notification'; // Import the Notification component
+import ToggleSwitch from './components/ToggleSwitch/ToggleSwitch'; // Import the ToggleSwitch component
+import Slider from './components/Slider/Slider'; // Import the Slider component
+
 import './App.css';
 
 function App() {
   // State for managing the sidebar's open/close state
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-  
+
   // State for managing the modal's open/close state
   const [isModalOpen, setIsModalOpen] = useState(false);
+  
+  // State for managing notifications
+  const [notification, setNotification] = useState(null);
+
   const images = [
     'https://via.placeholder.com/400x300',
     'https://via.placeholder.com/400x300',
@@ -37,17 +43,13 @@ function App() {
     // Add more image URLs here
   ];
 
-  const tabs = [
-    { title: 'Tab 1', content: 'Content for Tab 1' },
-    { title: 'Tab 2', content: 'Content for Tab 2' },
-    { title: 'Tab 3', content: 'Content for Tab 3' },
-  ];
-
-  const steps = [
-    { content: "Step 1 content" },
-    { content: "Step 2 content" },
-    { content: "Step 3 content" }
-  ];
+  // Function to show notification
+  const showNotification = (message, type) => {
+    setNotification({ message, type });
+    setTimeout(() => {
+      setNotification(null);
+    }, 3000); // Hide notification after 3 seconds
+  };
 
   // Toggle the sidebar open or close
   const handleToggleSidebar = () => {
@@ -105,18 +107,6 @@ function App() {
   const value = 75;
   const max = 100;
 
-  const [currentPage, setCurrentPage] = useState(1);
-
-  // Dummy data for pagination
-  const itemsPerPage = 5;
-  const totalItems = 25;
-  const totalPages = Math.ceil(totalItems / itemsPerPage);
-
-  // Handle page change
-  const handlePageChange = (pageNumber) => {
-    setCurrentPage(pageNumber);
-  };
-
   return (
     <div className="App" id="outer-container">
       {/* Sidebar component */}
@@ -144,16 +134,43 @@ function App() {
           {/* Carousel component */}
           <Carousel />
           
+          {/* Loader component */}
+          <Loader />
+
+          {/* Pagination component */}
+          <Pagination currentPage={1} totalPages={5} onChangePage={() => {}} />
+
+          {/* Notification component */}
+          {notification && (
+            <Notification
+              message={notification.message}
+              type={notification.type}
+              onClose={() => setNotification(null)}
+            />
+          )}
+
+          {/* ToggleSwitch component */}
+          <ToggleSwitch />
+
+          {/* Slider component */}
+          <Slider />
+          
           <h1>Stepper Example</h1>
-      <Stepper steps={steps} />
-          <Tabs tabs={tabs} />
+          <Stepper steps={[{ content: "Step 1 content" }, { content: "Step 2 content" }, { content: "Step 3 content" }]} />
+          
+          <Tabs tabs={[
+            { title: 'Tab 1', content: 'Content for Tab 1' },
+            { title: 'Tab 2', content: 'Content for Tab 2' },
+            { title: 'Tab 3', content: 'Content for Tab 3' },
+          ]} />
+
           <h1>Tooltip Example</h1>
-      <Tooltip text="This is a tooltip">
-        <button>Hover over me</button>
-      </Tooltip>
-      <h1>Progress Bar Example</h1>
-      {/* Render the Progressbar component with the appropriate props */}
-      <Progressbar value={value} max={max} />
+          <Tooltip text="This is a tooltip">
+            <button>Hover over me</button>
+          </Tooltip>
+          
+          <h1>Progress Bar Example</h1>
+          <Progressbar value={value} max={max} />
 
           <h1>Image Gallery</h1>
           <ImageGallery images={images} />
@@ -194,22 +211,9 @@ function App() {
             </Modal>
           )}
 
-          {/* ToggleSwitch component */}
-          <h1>Toggle Switch Example</h1>
-      <ToggleSwitch initialState={false} onChange={(state) => console.log(state)} />
-
           {/* Accordion component */}
           <Accordion items={accordionItems} />
-          <Loader />
-
-{/* Render the Slider component */}
-<Slider min={0} max={100} step={1} onChange={(value) => console.log(value)} />
         </div>
-        <Pagination
-  currentPage={currentPage}
-  totalPages={totalPages}
-  onChangePage={handlePageChange}
-/>
 
         {/* Footer component */}
         <Footer />
