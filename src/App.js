@@ -206,10 +206,11 @@ function App() {
 <Slider min={0} max={100} step={1} onChange={(value) => console.log(value)} />
         </div>
         <Pagination
-        currentPage={currentPage}
-        totalPages={totalPages}
-        onPageChange={handlePageChange}
-      />
+  currentPage={currentPage}
+  totalPages={totalPages}
+  onChangePage={handlePageChange}
+/>
+
         {/* Footer component */}
         <Footer />
       </div>
