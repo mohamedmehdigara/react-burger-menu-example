@@ -11,6 +11,9 @@ const Pagination = ({ currentPage, totalPages, onChangePage }) => {
     }
   };
 
+  // Generate an array of page numbers to render
+  const pageNumbers = Array.from({ length: totalPages }, (_, index) => index + 1);
+
   return (
     <div className="pagination">
       <button
@@ -22,7 +25,7 @@ const Pagination = ({ currentPage, totalPages, onChangePage }) => {
       </button>
       
       {/* Render page number links */}
-      {Array.from({ length: totalPages }, (_, index) => index + 1).map((page) => (
+      {pageNumbers.map((page) => (
         <button
           key={page}
           className={`pagination-button ${currentPage === page ? 'active' : ''}`}
